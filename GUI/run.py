@@ -4,7 +4,6 @@ __author__ = 'BoyChaiwat'
 import tkinter as tk
 import os
 import time
-
 import serial
 import pymysql
 
