@@ -19,7 +19,7 @@ cur2boylogin = conn2boylogin.cursor()
 conn2local = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2local = conn2local.cursor()
 
-#check = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
+check = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=1)
 #checkled = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
 selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
 ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
@@ -249,31 +249,26 @@ class StartPage(tk.Frame):
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Register", font=LARGE_FONT)
-        label.pack(pady=10, padx=10)
+        toplabel = tk.Label(self, text="Register from", font=LARGE_FONT)
+        toplabel.pack(pady=10, padx=10)
+        footlabel = tk.Label(self, text="Please Tap your ID Card", font=LARGE_FONT)
+        footlabel.place(x=80, y=200)
 
         button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=330, y=230)
-        a, b = readcard()
-        if a == "a":
-            print(a)
-            print(b)
+        button1.place(x=350, y=250)
         # button2 = tk.Button(self, text="Print", command=self.checkcredit)
         # button2.pack()
 
 class PageTwo(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Credit report", font=LARGE_FONT)
-        label.pack(pady=10, padx=10)
+        toplable = tk.Label(self, text="Credit report", font=LARGE_FONT)
+        toplable.pack(pady=10, padx=10)
 
         button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=330, y=230)
+        button1.place(x=350, y=250)
         #button2 = tk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
         #button2.pack()
-
-def readcard():
-    return "a", "b"
 
 app = SeaofBTCapp()
 app.geometry('480x300')

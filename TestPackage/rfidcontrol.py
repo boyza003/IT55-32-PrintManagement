@@ -6,7 +6,6 @@ import pymysql
 conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2boylogin = conn2boylogin.cursor()
 check = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=0.1)
-# checkled = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
 selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
 ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
 ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])

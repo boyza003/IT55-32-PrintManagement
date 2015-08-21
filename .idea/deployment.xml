@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="pi.21" />
+  <component name="PublishConfigData" serverName="pi.21" uploadOnCheckin="9b46d3d4-5541-471b-a6a7-af6ccb880d73">
+    <option name="myUploadOnCheckinName" value="pi" />
+  </component>
 </project>
