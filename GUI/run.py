@@ -19,8 +19,8 @@ cur2boylogin = conn2boylogin.cursor()
 conn2local = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2local = conn2local.cursor()
 
-check = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
-checkled = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
+#check = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
+#checkled = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
 selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
 ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
 ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
@@ -166,10 +166,14 @@ class StartPage(tk.Frame):
 
             looppoolmanagement()
 
-        # Print button
-        printcolor = tk.Button(self, text="Print", command=self.printpool1)
+        # Button zone
+        printcolor = tk.Button(self, text="Print", command=self.printpool1, font=LARGE_FONT)
         printcolor.place(x=345, y=50)
         # write_slogan(printcolor)
+        registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(PageOne))
+        registerbutton.place(x=100, y=240)
+        creditreportbutton = tk.Button(self, text="Credit report", command=lambda: controller.show_frame(PageTwo))
+        creditreportbutton.place(x=200, y=240)
 
         # Show label list
         job1 = tk.Label(self, font=LIST_FONT)
@@ -198,7 +202,7 @@ class StartPage(tk.Frame):
             global jobid
             global stdid
             print(ledtime)
-            check.write(bytearray(selectkey))
+            '''check.write(bytearray(selectkey))
             datarx = ''.join(format(x, '02x') for x in check.read(128))
             check.close()
             check.open()
@@ -236,7 +240,7 @@ class StartPage(tk.Frame):
                 # check.open()
                 ledtime = 0
                 print("Not found card")
-                return False
+                return False'''
             button.after(1000, loopcheckcredit)
 
         loopcheckcredit()
@@ -245,25 +249,31 @@ class StartPage(tk.Frame):
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Page One!!!", font=LARGE_FONT)
+        label = tk.Label(self, text="Register", font=LARGE_FONT)
         label.pack(pady=10, padx=10)
 
         button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
         button1.place(x=330, y=230)
+        a, b = readcard()
+        if a == "a":
+            print(a)
+            print(b)
         # button2 = tk.Button(self, text="Print", command=self.checkcredit)
         # button2.pack()
 
 class PageTwo(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Page Two!!!", font=LARGE_FONT)
+        label = tk.Label(self, text="Credit report", font=LARGE_FONT)
         label.pack(pady=10, padx=10)
 
-        button1 = tk.Button(self, text="Back to Home", command=lambda: controller.show_frame(StartPage))
-        button1.pack()
-        button2 = tk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
-        button2.pack()
+        button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
+        button1.place(x=330, y=230)
+        #button2 = tk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
+        #button2.pack()
 
+def readcard():
+    return "a", "b"
 
 app = SeaofBTCapp()
 app.geometry('480x300')
