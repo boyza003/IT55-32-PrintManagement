@@ -253,30 +253,6 @@ class PageOne(tk.Frame):
         # button2 = tk.Button(self, text="Print", command=self.checkcredit)
         # button2.pack()
 
-    '''def checkcredit(self):
-        serint = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=1)
-        key = bytes([0xBA, 0x02, 0x01, 0xB9])
-        serint.write(bytearray(key))
-        while True:
-            serint.write(bytearray(key))
-            datarx = ''.join(format(x, '02x') for x in serint.read(128))
-            if datarx != "bd030101be":
-                print("Card on")
-                cur2boylogin.execute("SELECT credit_balance FROM CREDIT WHERE student_id =%s", datarx)
-                row = cur2boylogin.fetchone()
-                if row[0] > 0:
-                    print("Credit OK")
-                    return True
-                else:
-                    print("Not print")
-                    return False
-                    break
-            else:
-                print("No card")
-                return False
-        serint.closed()'''
-
-
 class PageTwo(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
