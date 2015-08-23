@@ -1,14 +1,12 @@
-__author__ = 'PC-B1301'
 __author__ = 'BoyChaiwat'
 
+from control import *
 import tkinter as tk
 import os
 import time
-
-import serial
 import pymysql
 
-LARGE_FONT = ("Verdana", 24)
+LARGE_FONT = ("Verdana", 22)
 TITLE_FONT = ("Helvetica", 16, "bold")
 LIST_FONT = ("Helvetica", 24)
 TIME_FONT = ("Helvetica", 16, "italic")
@@ -19,30 +17,24 @@ cur2boylogin = conn2boylogin.cursor()
 conn2local = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2local = conn2local.cursor()
 
-check = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=1)
-# checkled = serial.Serial("/dev/ttyUSB0", 115200, timeout=1)
-selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
-ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
-ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
-ledtime = 0
-lastlog = ""
-jobid = 24
-stdid = 0
-jobinpool1 = ""
-
 
 class SeaofBTCapp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
         container = tk.Frame(self)
+
         container.pack(side="top", fill="both", expand=True)
+
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, PageOne, PageTwo, Printpool1):
+
+        for F in (StartPage, PageOne, CreditReport):
             frame = F(container, self)
+
             self.frames[F] = frame
+
             frame.grid(row=0, column=0, sticky="nsew")
 
         self.show_frame(StartPage)
@@ -55,7 +47,6 @@ class SeaofBTCapp(tk.Tk):
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-
         # Header
         detailjobfrom = tk.Label(self, text="Print from", font=TIME_FONT)
         detailjobfrom.place(x=50, y=10)
@@ -167,146 +158,62 @@ class StartPage(tk.Frame):
             looppoolmanagement()
 
         # Button zone
-        printcolor = tk.Button(self, text="Print", command=lambda: controller.show_frame(Printpool1))
+        printcolor = tk.Button(self, text="Print")
         printcolor.place(x=345, y=50)
+
         # write_slogan(printcolor)
         registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(PageOne))
         registerbutton.place(x=100, y=240)
-        creditreportbutton = tk.Button(self, text="Credit report", command=lambda: controller.show_frame(PageTwo))
+        creditreportbutton = tk.Button(self, text="Credit report", command=lambda: controller.show_frame(CreditReport))
         creditreportbutton.place(x=200, y=240)
 
         # Show label list
         job1 = tk.Label(self, font=LIST_FONT)
         getjobfrom(job1)
 
-    def printpool1(button):
-        # check.write(bytearray(ledon))
-        # check.close()
-        # check.open()
-
-        def cutcredit(stdid, jobid):
-            return print("Good job", stdid, jobid)
-            '''file = open('page_log', 'r')  # specify file to open
-            data = file.readlines()  # read lines in file and put into
-            if lastlog != data[len(data) - 1]:
-                lastlog = data[len(data) - 1]
-                print("Student ID : ", stdid, "Crdit -1 At job : ", jobid)
-                return True
-            else:
-                return False
-                # file.close()  # good practice to close files after use'''
-
-        def loopcheckcredit():
-            global ledtime
-            check.write(bytearray(selectkey))
-            datarx = ''.join(format(x, '02x') for x in check.read(128))
-            print("led time", ledtime)
-            try:
-                if ledtime == 150:
-                    check.write(bytearray(ledoff))
-                    check.read()
-                    print("No card comming")
-                    return datarx, 102
-                if datarx != "bd030101be":
-                    cur2boylogin.execute("SELECT status FROM CREDIT WHERE student_id = %s", datarx)
-                    row = cur2boylogin.fetchone()
-                    check.write(bytearray(ledoff))
-                    check.read(128)
-                    print(datarx)
-                    return datarx, row[0]
-                elif (ledtime % 2) == 0:
-                    check.write(bytearray(ledon))
-                    check.read(128)
-                elif (ledtime % 2) != 0:
-                    check.write(bytearray(ledoff))
-                    check.read(128)
-                ledtime += 1
-            except Exception as e:
-                print("Excaption readcard() :", e)
-                return datarx, 102
-            app.after(100, loopcheckcredit)
-
-        loopcheckcredit()
-
 
 class PageOne(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        toplabel = tk.Label(self, text="Register from", font=LARGE_FONT)
-        toplabel.pack(pady=10, padx=10)
-        footlabel = tk.Label(self, text="Please Tap your ID Card", font=LARGE_FONT)
-        footlabel.place(x=80, y=200)
+        label = tk.Label(self, text="Page One!!!", font=LARGE_FONT)
+        label.pack(pady=10, padx=10)
 
-        button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=350, y=250)
-        # button2 = tk.Button(self, text="Print", command=self.checkcredit)
-        # button2.pack()
+        button1 = tk.Button(self, text="Back to Home",
+                            command=lambda: controller.show_frame(StartPage))
+        button1.pack()
+
+        button2 = tk.Button(self, text="Page Two",
+                            command=lambda: controller.show_frame(CreditReport))
+        button2.pack()
 
 
-class PageTwo(tk.Frame):
+class CreditReport(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        toplable = tk.Label(self, text="Credit report", font=LARGE_FONT)
-        toplable.pack(pady=10, padx=10)
+        headlabel = tk.Label(self, text="Credit report", font=LARGE_FONT)
+        headlabel.pack(pady=10, padx=10)
+        stdidlable = tk.Label(self, text="Student ID : ", font=LARGE_FONT)
+        stdidlable.place(x=20, y=50)
+        creditlable = tk.Label(self, text="Balanace : ", font=LARGE_FONT)
+        creditlable.place(x=20, y=100)
 
-        button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=350, y=250)
-        # button2 = tk.Button(self, text="Page One", command=lambda: controller.show_frame(PageOne))
-        # button2.pack()
+        def checkcredit():
+            global stdidlable
+            global creditlable
+            x, y = readcard()
+            cur2boylogin.execute("SELECT credit_balance FROM CREDIT WHERE student_id = %s", x)
+            row = cur2boylogin.fetchone()
+            if row[0] > 0:
+                stdidlable = tk.Label(self, text=x, font=LARGE_FONT)
+                stdidlable.place(x=170, y=50)
+                creditlable = tk.Label(self, text=row[0], font=LARGE_FONT)
+                creditlable.place(x=145, y=100)
 
-
-class Printpool1(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        toplable = tk.Label(self, text="Print job at pool 1", font=LARGE_FONT)
-        toplable.pack(pady=10, padx=10)
-
-        def loopcheckcredit():
-            global ledtime
-            check.write(bytearray(selectkey))
-            datarx = ''.join(format(x, '02x') for x in check.read(128))
-            print("led time", ledtime)
-            try:
-                if ledtime == 150:
-                    check.write(bytearray(ledoff))
-                    check.read()
-                    print("No card comming")
-                    return datarx, 102
-                if datarx != "bd030101be":
-                    cur2boylogin.execute("SELECT status FROM CREDIT WHERE student_id = %s", datarx)
-                    row = cur2boylogin.fetchone()
-                    check.write(bytearray(ledoff))
-                    check.read(128)
-                    print(datarx)
-                    return datarx, row[0]
-                elif (ledtime % 2) == 0:
-                    check.write(bytearray(ledon))
-                    check.read(128)
-                elif (ledtime % 2) != 0:
-                    check.write(bytearray(ledoff))
-                    check.read(128)
-                ledtime += 1
-            except Exception as e:
-                print("Excaption readcard() :", e)
-                return datarx, 102
-            app.after(100, loopcheckcredit)
-
-        loopcheckcredit()
-
-        printcolor = tk.Button(self, text="Print", command=self.loopcheckcredit)
-        printcolor.place(x=345, y=50)
-        button1 = tk.Button(self, text="Back to list", command=lambda: controller.show_frame(StartPage))
-        button1.place(x=350, y=250)
+        readcardbutton = tk.Button(self, text="Read card", command=checkcredit)
+        readcardbutton.place(x=340, y=180)
+        backtohomebutton = tk.Button(self, text="Back", command=lambda: controller.show_frame(PageOne))
+        backtohomebutton.place(x=350, y=230)
 
 app = SeaofBTCapp()
 app.geometry('480x300')
 app.mainloop()
-
-'''
-# TKk while loop
- def loopcheckcredit():
-
-            # อ่านให้เข้าใจ
-            app.after(1000, loopcheckcredit)
-        loopcheckcredit()
-'''
