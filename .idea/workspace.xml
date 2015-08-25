@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dd4d54d-9421-45d0-b7ba-1c9ead82d3ca" name="Default" comment="" />
+    <list default="true" id="0d9a4f66-74d2-495f-85a8-15404e6371c6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Icon&#13;" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Icon&#13;" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GUI/Icon&#13;" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestPackage/Icon&#13;" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestPackage/cutcredit.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestPackage/page_log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestPackage/testpymysql.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control.py" afterPath="$PROJECT_DIR$/control.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="IT55-32-PrintManagement.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -14,7 +27,14 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testfilelocktoread.coverage" NAME="testfilelocktoread Coverage Results" MODIFIED="1440134958076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1440402823113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$control.coverage" NAME="control Coverage Results" MODIFIED="1440402872275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$cutcredit.coverage" NAME="cutcredit Coverage Results" MODIFIED="1440434067644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$rfidcontrol.coverage" NAME="rfidcontrol Coverage Results" MODIFIED="1440160449244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$run.coverage" NAME="run Coverage Results" MODIFIED="1440228090972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$pro.coverage" NAME="pro Coverage Results" MODIFIED="1440229496202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testimportfrom.coverage" NAME="testimportfrom Coverage Results" MODIFIED="1440229346445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testpymysql.coverage" NAME="testpymysql Coverage Results" MODIFIED="1440311332955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -25,46 +45,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Hello.text" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hello.text">
+      <file leaf-file-name="cutcredit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestPackage/cutcredit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6689189">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#27#38#0" expanded="true" />
+                <marker date="1440506030000" expanded="true" signature="605:651" placeholder="UPDATE JOB S..." />
+                <marker date="1440506030000" expanded="true" signature="701:823" placeholder="UPDATE CREDI..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestPackage/page_log">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <file leaf-file-name="testpymysql.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestPackage/testpymysql.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="190" column="17" selection-start-line="190" selection-start-column="17" selection-end-line="190" selection-end-column="17" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="37" />
               <folding>
-                <element signature="e#51#71#0" expanded="true" />
-                <marker date="1440130275763" expanded="true" signature="2357:2388" placeholder="SELECT * FRO..POOL..." />
-                <marker date="1440130275763" expanded="true" signature="2743:2774" placeholder="SELECT * FRO..POOL..." />
-                <marker date="1440130275763" expanded="true" signature="3129:3160" placeholder="SELECT * FRO..POOL..." />
-                <marker date="1440130275763" expanded="true" signature="3517:3548" placeholder="SELECT * FRO..POOL..." />
-                <marker date="1440130275763" expanded="true" signature="4459:4528" placeholder="SELECT id, J..POOL..." />
-                <marker date="1440130275763" expanded="true" signature="5121:5181" placeholder="UPDATE POOL ..." />
-                <marker date="1440130275763" expanded="true" signature="5994:6054" placeholder="UPDATE POOL ..." />
-                <marker date="1440130275763" expanded="true" signature="6901:6961" placeholder="UPDATE POOL ..." />
-                <marker date="1440130275763" expanded="true" signature="7770:7830" placeholder="UPDATE POOL ..." />
-                <marker date="1440130275763" expanded="true" signature="9620:9663" placeholder="SELECT statu..CREDIT..." />
+                <marker date="1440310429000" expanded="true" signature="199:244" placeholder="SELECT statu..CREDIT..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testfilelocktoread.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testimportfrom.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestPackage/testimportfrom.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testfilelocktoread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17056856">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rfidcontrol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestPackage/rfidcontrol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,14 +121,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/TestPackage/rfidcontrol.py" />
         <option value="$PROJECT_DIR$/Hello.text" />
         <option value="$PROJECT_DIR$/GUI/run.py" />
-        <option value="$PROJECT_DIR$/TestPackage/testfilelocktoread.py" />
+        <option value="$PROJECT_DIR$/rfid" />
+        <option value="$PROJECT_DIR$/te/one.py" />
+        <option value="$PROJECT_DIR$/te/two.py" />
+        <option value="$PROJECT_DIR$/o.py" />
+        <option value="$PROJECT_DIR$/TestPackage/testimportfrom.py" />
+        <option value="$PROJECT_DIR$/halman.py" />
+        <option value="$PROJECT_DIR$/pro.py" />
+        <option value="$PROJECT_DIR$/rfidcontrol.py" />
+        <option value="$PROJECT_DIR$/TestPackage/testpymasql.py" />
+        <option value="$PROJECT_DIR$/TestPackage/testpymysql.py" />
+        <option value="$PROJECT_DIR$/control.py" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/TestPackage/page_log" />
+        <option value="$PROJECT_DIR$/TestPackage/cutcredit.py" />
       </list>
     </option>
   </component>
@@ -98,9 +158,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="184" />
-    <option name="width" value="1123" />
-    <option name="height" value="1057" />
+    <option name="y" value="23" />
+    <option name="width" value="1137" />
+    <option name="height" value="837" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -111,6 +171,9 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -126,6 +189,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -158,44 +222,108 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT55-32-PrintManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IT55-32-PrintManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Python.testfilelocktoread">
-    <configuration default="false" name="testfilelocktoread" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.cutcredit">
+    <configuration default="false" name="pro" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestPackage" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="IT55-32-PrintManagement" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestPackage/testfilelocktoread.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pro.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.4/bin/python3.4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IT55-32-PrintManagement" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="control" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.4/bin/python3.4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IT55-32-PrintManagement" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/control.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testpymysql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.4/bin/python3.4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestPackage" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IT55-32-PrintManagement" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestPackage/testpymysql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cutcredit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.4/bin/python3.4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestPackage" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="IT55-32-PrintManagement" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestPackage/cutcredit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -270,6 +398,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -382,12 +516,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.testfilelocktoread" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.pro" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.control" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testpymysql" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cutcredit" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.testfilelocktoread" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.cutcredit" />
+        <item index="1" class="java.lang.String" itemvalue="Python.control" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.testpymysql" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pro" />
       </list>
     </recent_temporary>
   </component>
@@ -397,118 +539,636 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8dd4d54d-9421-45d0-b7ba-1c9ead82d3ca" name="Default" comment="" />
-      <created>1440129928664</created>
+      <changelist id="0d9a4f66-74d2-495f-85a8-15404e6371c6" name="Default" comment="" />
+      <created>1440128404825</created>
       <option name="number" value="Default" />
-      <updated>1440129928664</updated>
+      <updated>1440128404825</updated>
     </task>
-    <task id="LOCAL-00001" summary="Hello world">
-      <created>1440129995296</created>
+    <task id="LOCAL-00001" summary="test mac">
+      <created>1440142578639</created>
       <option name="number" value="00001" />
       <option name="project" value="LOCAL" />
-      <updated>1440129995296</updated>
+      <updated>1440142578639</updated>
     </task>
-    <task id="LOCAL-00002" summary="Hello world">
-      <created>1440130173957</created>
+    <task id="LOCAL-00002" summary="def readcard() completed">
+      <created>1440155592788</created>
       <option name="number" value="00002" />
       <option name="project" value="LOCAL" />
-      <updated>1440130173957</updated>
+      <updated>1440155592788</updated>
     </task>
-    <task id="LOCAL-00003" summary="Hello world">
-      <created>1440130280103</created>
+    <task id="LOCAL-00003" summary="def readcard() completed">
+      <created>1440166420280</created>
       <option name="number" value="00003" />
       <option name="project" value="LOCAL" />
-      <updated>1440130280103</updated>
+      <updated>1440166420280</updated>
     </task>
-    <task id="LOCAL-00004" summary="Hello world">
-      <created>1440140253376</created>
+    <task id="LOCAL-00004" summary="def readcard() completed">
+      <created>1440166518236</created>
       <option name="number" value="00004" />
       <option name="project" value="LOCAL" />
-      <updated>1440140253376</updated>
+      <updated>1440166518236</updated>
     </task>
-    <task id="LOCAL-00005" summary="Hello world">
-      <created>1440140299957</created>
+    <task id="LOCAL-00005" summary="def readcard() completed">
+      <created>1440300753749</created>
       <option name="number" value="00005" />
       <option name="project" value="LOCAL" />
-      <updated>1440140299957</updated>
+      <updated>1440300753749</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="184" y="0" width="1123" height="1057" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1137" height="837" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24929444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5101143" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3828125" sideWeight="0.48988566" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18909411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hello world" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hello world" />
+    <MESSAGE value="test mac" />
+    <MESSAGE value="def readcard() completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="def readcard() completed" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/control.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Hello.text">
+    <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-          <folding />
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="14" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testimportfrom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="37" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testpymysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="190" column="17" selection-start-line="190" selection-start-column="17" selection-end-line="190" selection-end-column="17" />
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="14" />
           <folding>
-            <element signature="e#51#71#0" expanded="true" />
-            <marker date="1440130275763" expanded="true" signature="2357:2388" placeholder="SELECT * FRO..POOL..." />
-            <marker date="1440130275763" expanded="true" signature="2743:2774" placeholder="SELECT * FRO..POOL..." />
-            <marker date="1440130275763" expanded="true" signature="3129:3160" placeholder="SELECT * FRO..POOL..." />
-            <marker date="1440130275763" expanded="true" signature="3517:3548" placeholder="SELECT * FRO..POOL..." />
-            <marker date="1440130275763" expanded="true" signature="4459:4528" placeholder="SELECT id, J..POOL..." />
-            <marker date="1440130275763" expanded="true" signature="5121:5181" placeholder="UPDATE POOL ..." />
-            <marker date="1440130275763" expanded="true" signature="5994:6054" placeholder="UPDATE POOL ..." />
-            <marker date="1440130275763" expanded="true" signature="6901:6961" placeholder="UPDATE POOL ..." />
-            <marker date="1440130275763" expanded="true" signature="7770:7830" placeholder="UPDATE POOL ..." />
-            <marker date="1440130275763" expanded="true" signature="9620:9663" placeholder="SELECT statu..CREDIT..." />
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testimportfrom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="37" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testpymysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testimportfrom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17056856">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="4" selection-start-column="0" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="822" column="0" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22869955">
+          <caret line="502" column="0" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.51724136">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MultiMarkdownHtmlEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.941704">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#27#48#0" expanded="true" />
+            <element signature="e#7957#9284#0" expanded="false" />
+            <element signature="e#9369#10696#0" expanded="false" />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT id, J..POOL..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="UPDATE POOL ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1440402823000" expanded="true" signature="-1:-1" placeholder="SELECT credi..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="e#27#40#0" expanded="false" />
+            <marker date="1440402894000" expanded="true" signature="-1:-1" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/page_log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testpymysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <marker date="1440310429000" expanded="true" signature="199:244" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testimportfrom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/testfilelocktoread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/rfidcontrol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPackage/cutcredit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689189">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#38#0" expanded="true" />
+            <marker date="1440506030000" expanded="true" signature="605:651" placeholder="UPDATE JOB S..." />
+            <marker date="1440506030000" expanded="true" signature="701:823" placeholder="UPDATE CREDI..." />
           </folding>
         </state>
       </provider>

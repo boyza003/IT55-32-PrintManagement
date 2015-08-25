@@ -3,7 +3,7 @@ __author__ = 'BoyChaiwat'
 import serial
 import pymysql
 
-conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
+conn2boylogin = pymysql.connect(host='128.199.132.148', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2boylogin = conn2boylogin.cursor()
 check = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=0.1)
 selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
@@ -31,7 +31,7 @@ def readcard():
                 row = cur2boylogin.fetchone()
                 check.write(bytearray(ledoff))
                 check.read(128)
-                return datarx, row[0]
+                return datarx, row
             elif (count % 2) == 0:
                 check.write(bytearray(ledon))
                 check.read(128)
@@ -40,6 +40,5 @@ def readcard():
                 check.read(128)
             count += 1
         except Exception as e:
-            print("Excaption readcard() :", e)
+            print("Excaption readcard@Controlfile :", e)
             return datarx, 102
-

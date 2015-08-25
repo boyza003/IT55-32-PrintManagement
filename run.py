@@ -12,9 +12,9 @@ LIST_FONT = ("Helvetica", 24)
 TIME_FONT = ("Helvetica", 16, "italic")
 
 # Database connection
-conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
+conn2boylogin = pymysql.connect(host='128.199.132.148', user='boy', passwd='boylogin', db='mydb')
 cur2boylogin = conn2boylogin.cursor()
-conn2local = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
+conn2local = pymysql.connect(host='128.199.132.148', user='boy', passwd='boylogin', db='mydb')
 cur2local = conn2local.cursor()
 
 
@@ -30,7 +30,7 @@ class SeaofBTCapp(tk.Tk):
 
         self.frames = {}
 
-        for F in (StartPage, PageOne, CreditReport):
+        for F in (StartPage, Register, CreditReport):
             frame = F(container, self)
 
             self.frames[F] = frame
@@ -125,8 +125,6 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + check[check.find("print") + 6:check.find("print") + 15] + "-H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
-                        # strmove = "sudo lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool2"
-                        # os.popen(strmove).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=%s WHERE id = 2",
                                           (int(check[check.find("print") + 6:check.find("print") + 15]),
                                            check[check.find("print") + 24:check.find("print") + 40], getdate[11:19]))
@@ -136,8 +134,6 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + check[check.find("print") + 6:check.find("print") + 15] + "-H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
-                        # strmove = "lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool3"
-                        # os.popen(strmove).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=%s WHERE id = 3",
 
                                           (int(check[check.find("print") + 6:check.find("print") + 15]),
@@ -147,8 +143,6 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + check[check.find("print") + 6:check.find("print") + 15] + "-H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
-                        # strmove = "lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool4"
-                        # os.popen(strmove).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=%s WHERE id = 4",
                                           (int(check[check.find("print") + 6:check.find("print") + 15]),
                                            check[check.find("print") + 24:check.find("print") + 40], getdate[11:19]))
@@ -162,7 +156,7 @@ class StartPage(tk.Frame):
         printcolor.place(x=345, y=50)
 
         # write_slogan(printcolor)
-        registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(PageOne))
+        registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(Register))
         registerbutton.place(x=100, y=240)
         creditreportbutton = tk.Button(self, text="Credit report", command=lambda: controller.show_frame(CreditReport))
         creditreportbutton.place(x=200, y=240)
@@ -172,19 +166,35 @@ class StartPage(tk.Frame):
         getjobfrom(job1)
 
 
-class PageOne(tk.Frame):
+class Register(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="Page One!!!", font=LARGE_FONT)
-        label.pack(pady=10, padx=10)
+        headlabel = tk.Label(self, text="Register", font=LARGE_FONT)
+        headlabel.pack(pady=10, padx=10)
+        stdidlable = tk.Label(self, text="Student ID : ", font=LARGE_FONT)
+        stdidlable.place(x=20, y=50)
+        creditlable = tk.Label(self, text="Balanace : ", font=LARGE_FONT)
+        creditlable.place(x=20, y=100)
 
-        button1 = tk.Button(self, text="Back to Home",
-                            command=lambda: controller.show_frame(StartPage))
-        button1.pack()
+        def clickregister():
+            try:
+                x, y = readcard()
+                cur2boylogin.execute("SELECT * FROM STUDENT WHERE id=%s", x)
+                row = cur2boylogin.fetchone()
+                if row[0] == x:
+                    cur2boylogin.execute("INSERT INTO CREDIT(credit_balance, status,student_id) VALUES (100,101,%s)",
+                                         row[0])
+                    stdidlable = tk.Label(self, text=x, font=LARGE_FONT)
+                    stdidlable.place(x=170, y=50)
+                    creditlable = tk.Label(self, text="100", font=LARGE_FONT)
+                    creditlable.place(x=145, y=100)
+            except Exception as e:
+                print(e)
 
-        button2 = tk.Button(self, text="Page Two",
-                            command=lambda: controller.show_frame(CreditReport))
-        button2.pack()
+        button1 = tk.Button(self, text="Read card", command=clickregister)
+        button1.place(x=340, y=180)
+        button2 = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
+        button2.place(x=350, y=230)
 
 
 class CreditReport(tk.Frame):
@@ -197,22 +207,29 @@ class CreditReport(tk.Frame):
         creditlable = tk.Label(self, text="Balanace : ", font=LARGE_FONT)
         creditlable.place(x=20, y=100)
 
+        stdidlable2 = tk.Label(self, font=LARGE_FONT)
+        stdidlable2.place(x=170, y=50)
+        creditlable2 = tk.Label(self, font=LARGE_FONT)
+        creditlable2.place(x=145, y=100)
+
         def checkcredit():
-            global stdidlable
-            global creditlable
-            x, y = readcard()
-            cur2boylogin.execute("SELECT credit_balance FROM CREDIT WHERE student_id = %s", x)
-            row = cur2boylogin.fetchone()
-            if row[0] > 0:
-                stdidlable = tk.Label(self, text=x, font=LARGE_FONT)
-                stdidlable.place(x=170, y=50)
-                creditlable = tk.Label(self, text=row[0], font=LARGE_FONT)
-                creditlable.place(x=145, y=100)
+            stdidlable2.config(text="")
+            creditlable2.config(text="")
+            try:
+                x, y = readcard()
+                cur2boylogin.execute("SELECT credit_balance FROM CREDIT WHERE student_id = %s", x)
+                row = cur2boylogin.fetchone()
+                if row[0] > 0:
+                    stdidlable2.config(text=x)
+                    creditlable2.config(text=y)
+            except Exception as e:
+                print(e)
 
         readcardbutton = tk.Button(self, text="Read card", command=checkcredit)
         readcardbutton.place(x=340, y=180)
-        backtohomebutton = tk.Button(self, text="Back", command=lambda: controller.show_frame(PageOne))
+        backtohomebutton = tk.Button(self, text="Back", command=lambda: controller.show_frame(StartPage))
         backtohomebutton.place(x=350, y=230)
+
 
 app = SeaofBTCapp()
 app.geometry('480x300')
