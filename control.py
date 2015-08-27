@@ -2,14 +2,38 @@ __author__ = 'BoyChaiwat'
 
 import serial
 import pymysql
+import time
 
 conn2boylogin = pymysql.connect(host='128.199.132.148', port=3306, user='boy', passwd='boylogin', db='mydb')
 cur2boylogin = conn2boylogin.cursor()
-check = serial.Serial("/dev/tty.SLAB_USBtoUART", 115200, timeout=0.1)
+check = serial.Serial("/dev/ttyUSB0", 115200, timeout=0.1)
 selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
 ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
 ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
 
+checklast = 0
+checkloopcreditcut = 0
+def cutcredit(stdid, jobfrom, jobid):
+    global checklast
+    global checkloopcreditcut
+    while True:
+        f = open('/var/log/cups/page_log', 'r', encoding='utf-8')
+        linelist = f.readlines()
+        f.close()
+        if linelist[len(linelist) - 1] != checklast:
+            x = jobfrom + " " + str(jobid)
+            if linelist[len(linelist) - 1].find(x) > 0:
+                cur2boylogin.execute("UPDATE JOB SET page = page + 1 WHERE job_id = %s", jobid)
+                cur2boylogin.execute("UPDATE CREDIT SET credit_balance = credit_balance -1, credit_used = credit_used +1, last_print = NOW() WHERE student_id = %s", stdid)
+                checklast = linelist[len(linelist) - 1]
+                print("cut", checkloopcreditcut)
+                print(linelist[len(linelist) - 1] == linelist)
+        elif checkloopcreditcut == 500:
+            print("out creditcut()")
+            break
+        print(checkloopcreditcut)
+        checkloopcreditcut += 1
+        time.sleep(2)
 
 def readcard():
     # Return (x, y) x=datarx and y=status(100=no credit, 101=have credit, 102=card not found)
@@ -31,7 +55,8 @@ def readcard():
                 row = cur2boylogin.fetchone()
                 check.write(bytearray(ledoff))
                 check.read(128)
-                return datarx, row
+                print(datarx)
+                return datarx, row[0]
             elif (count % 2) == 0:
                 check.write(bytearray(ledon))
                 check.read(128)

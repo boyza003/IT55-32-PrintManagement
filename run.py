@@ -101,7 +101,6 @@ class StartPage(tk.Frame):
 
                 # Pool management
                 # print("Pool management")
-                Now = time.time()
                 check = os.popen("sudo lpstat -o").read()
                 print(check.find("print"))
                 print(check[check.find("print") + 6:check.find("print") + 15])
@@ -110,16 +109,19 @@ class StartPage(tk.Frame):
                     # print("I have a new job")
                     cur2local.execute("SELECT id, JOB_ID FROM POOL WHERE time = (SELECT MIN(time) FROM POOL)")
                     row = cur2local.fetchone()
+                    jobx = str(check[check.find("print") + 6:check.find("print") + 15]).strip()
+                    joby = str(check[check.find("print") + 24:check.find("print") + 39]).strip()
+                    cur2local.execute("INSERT INTO  JOB (job_id, page, job_in ) VALUES (%s, 0, NOW())", jobx)
+                    print(jobx)
+                    print(joby)
                     # print(row[0])
                     if row[0] == 1:
-                        jobinpool1 = check[check.find("print") + 6:check.find("print") + 15]
-                        strmove = "sudo lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool1"
-                        strhold = "sudo lp -i " + check[check.find("print") + 6:check.find("print") + 15] + "-H 06:00"
+                        jobinpool1 = jobx
+                        strmove = "sudo lpmove " + jobx + " pool1"
+                        strhold = "sudo lp -i " + jobx + "-H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
-                        cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=%s WHERE id = 1",
-                                          (int(check[check.find("print") + 6:check.find("print") + 15]),
-                                           check[check.find("print") + 24:check.find("print") + 40], getdate[11:19]))
+                        cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 1", (int(jobx), joby))
                     elif row[0] == 2:
                         strmove = "sudo lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool2"
                         strhold = "sudo lp -i " + check[check.find("print") + 6:check.find("print") + 15] + "-H 06:00"
@@ -151,8 +153,21 @@ class StartPage(tk.Frame):
 
             looppoolmanagement()
 
+        def printjob1():
+            stdid, ststusid = readcard()
+            print(ststusid)
+            if ststusid == 101:
+                print("get")
+                cur2local.execute("SELECT job_id, job_from FROM POOL WHERE id = 1")
+                row = cur2local.fetchone()
+                strmove = "sudo lpmove " + str(row[0]) + " get"
+                strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                os.popen(strmove).read()
+                os.popen(strhold).read()
+                cutcredit(stdid, row[1], row[0])
+
         # Button zone
-        printcolor = tk.Button(self, text="Print")
+        printcolor = tk.Button(self, text="Print", command=printjob1)
         printcolor.place(x=345, y=50)
 
         # write_slogan(printcolor)
