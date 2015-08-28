@@ -117,10 +117,10 @@ class StartPage(tk.Frame):
                     # print(row[0])
                     if row[0] == 1:
                         jobinpool1 = jobx
+                        strhold = "sudo lp -i " + jobx + " -H 06:00"
                         strmove = "sudo lpmove " + jobx + " pool1"
-                        strhold = "sudo lp -i " + jobx + "-H 06:00"
-                        os.popen(strmove).read()
                         os.popen(strhold).read()
+                        os.popen(strmove).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 1", (int(jobx), joby))
                     elif row[0] == 2:
                         strmove = "sudo lpmove " + check[check.find("print") + 6:check.find("print") + 15] + " pool2"
