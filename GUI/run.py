@@ -185,7 +185,7 @@ class StartPage(tk.Frame):
         # check.open()
 
         def cutcredit(stdid, jobid):
-            return print("Good job", stdid, jobid)
+            #return print("Good job", stdid, jobid)
             '''file = open('page_log', 'r')  # specify file to open
             data = file.readlines()  # read lines in file and put into
             if lastlog != data[len(data) - 1]:
