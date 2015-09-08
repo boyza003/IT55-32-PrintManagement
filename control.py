@@ -15,7 +15,8 @@ ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
 
 checklast = 0
 checkloopcreditcut = 0
-def cutcredit(stdid, jobfrom, jobid):
+'''def cutcredit(stdid, jobfrom, jobid):
+    global check
     global checklast
     global checkloopcreditcut
     checkoutloop = "get-" + str(jobid)
@@ -41,7 +42,23 @@ def cutcredit(stdid, jobfrom, jobid):
         print("def cutcredit(stdid, jobfrom, jobid):")
         #print(checkloopcreditcut)
         #print(check.find(checkoutloop))
-        time.sleep(2)
+        time.sleep(2)'''
+
+def cutcredit(stdid, jobid):
+    global count
+    while True:
+        check = os.popen("sudo lpstat -o").read()
+        if check.find("EPSON_T13") >= 0:
+            count += 1
+            print("+")
+        elif count > 0:
+            count = count/15
+            print(count)
+            cur2boylogin.execute("UPDATE CREDIT SET credit_balance = credit_balance - %s, credit_used = credit_used + %s, last_print = NOW() WHERE student_id = %s", (int(count), int(count), stdid))
+            cur2boylogin.execute("UPDATE JOB SET page = %s,job_out = NOW(), STUDENT_id = %s WHERE job_id = %s", (int(count), stdid, jobid))
+            count = 0
+            break
+    time.sleep(1)
 
 def readcard():
     # Return (x, y) x=datarx and y=status(100=no credit, 101=have credit, 102=card not found)

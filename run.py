@@ -6,7 +6,7 @@ import os
 import time
 import pymysql
 
-LARGE_FONT = ("Verdana", 22)
+LARGE_FONT = ("Verdana", 18)
 TITLE_FONT = ("Helvetica", 16, "bold")
 LIST_FONT = ("Helvetica", 24)
 TIME_FONT = ("Helvetica", 16, "italic")
@@ -49,13 +49,13 @@ class StartPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         # Header
         detailjobfrom = tk.Label(self, text="Print from", font=TIME_FONT)
-        detailjobfrom.place(x=50, y=10)
+        detailjobfrom.place(x=50, y=2)
         detailjobfrom.pi = detailjobfrom.place_info()
         detailjobdate = tk.Label(self, text="Print time", font=TIME_FONT)
-        detailjobdate.place(x=200, y=10)
+        detailjobdate.place(x=200, y=2)
         detailjobdate.pi = detailjobdate.place_info()
-        delailjobink = tk.Label(self, text="Ink", font=TIME_FONT)
-        delailjobink.place(x=360, y=10)
+        delailjobink = tk.Label(self, text="", font=TIME_FONT)
+        delailjobink.place(x=390, y=2)
         delailjobink.pi = delailjobink.place_info()
 
         # Job1
@@ -67,33 +67,33 @@ class StartPage(tk.Frame):
                 cur2local.execute("SELECT * FROM POOL WHERE id = 1")
                 row = cur2local.fetchone()
                 labeljob1from = tk.Label(self, text=row[2], font=LIST_FONT)
-                labeljob1from.place(x=20, y=45)
+                labeljob1from.place(x=20, y=25)
                 lablejob1time = tk.Label(self, text=row[3], font=TIME_FONT)
-                lablejob1time.place(x=200, y=50)
+                lablejob1time.place(x=200, y=30)
 
                 # Pool2
                 cur2local.execute("SELECT * FROM POOL WHERE id = 2")
                 row = cur2local.fetchone()
                 labeljob2from = tk.Label(self, text=row[2], font=LIST_FONT)
-                labeljob2from.place(x=20, y=95)
+                labeljob2from.place(x=20, y=65)
                 lablejob2time = tk.Label(self, text=row[3], font=TIME_FONT)
-                lablejob2time.place(x=200, y=105)
+                lablejob2time.place(x=200, y=70)
 
                 # Pool3
                 cur2local.execute("SELECT * FROM POOL WHERE id = 3")
                 row = cur2local.fetchone()
                 labeljob3from = tk.Label(self, text=row[2], font=LIST_FONT)
-                labeljob3from.place(x=20, y=145)
+                labeljob3from.place(x=20, y=105)
                 lablejob3time = tk.Label(self, text=row[3], font=TIME_FONT)
-                lablejob3time.place(x=200, y=155)
+                lablejob3time.place(x=200, y=110)
 
                 # Pool4
                 cur2local.execute("SELECT * FROM POOL WHERE id = 4")
                 row = cur2local.fetchone()
                 labeljob1from = tk.Label(self, text=row[2], font=LIST_FONT)
-                labeljob1from.place(x=20, y=200)
+                labeljob1from.place(x=20, y=145)
                 lablejob1time = tk.Label(self, text=row[3], font=TIME_FONT)
-                lablejob1time.place(x=200, y=195)
+                lablejob1time.place(x=200, y=150)
 
                 getText = row[0]
                 label.config(text=str(getText))
@@ -154,7 +154,7 @@ class StartPage(tk.Frame):
 
             looppoolmanagement()
 
-        def print1():
+        '''def print1():
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -165,7 +165,7 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + str(row[0]) + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[1], row[0])
+                cutcredit(stdid, row[1], row[0])'''
 
         def print1():
             stdid, ststusid = readcard()
@@ -178,7 +178,8 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + str(row[0]) + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[1], row[0])
+                #cutcredit(stdid, row[1], row[0])
+                cutcredit(stdid, row[0])
 
         def print2():
             stdid, ststusid = readcard()
@@ -191,7 +192,8 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + str(row[0]) + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[1], row[0])
+                #cutcredit(stdid, row[1], row[0])
+                cutcredit(stdid, row[0])
 
         def print3():
             stdid, ststusid = readcard()
@@ -204,7 +206,8 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + str(row[0]) + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[1], row[0])
+                #cutcredit(stdid, row[1], row[0])
+                cutcredit(stdid, row[0])
 
         def print4():
             stdid, ststusid = readcard()
@@ -217,27 +220,28 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + str(row[0]) + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[1], row[0])
+                #cutcredit(stdid, row[1], row[0])
+                cutcredit(stdid, row[0])
 
         def restartcups():
             os.popen("sudo service cups restart").read()
 
         # Print button zone
         printjob1 = tk.Button(self, text="Print", command=print1)
-        printjob1.place(x=375, y=50)
+        printjob1.place(x=375, y=30)
         printjob2 = tk.Button(self, text="Print", command=print2)
-        printjob2.place(x=375, y=100)
+        printjob2.place(x=375, y=70)
         printjob3 = tk.Button(self, text="Print", command=print3)
-        printjob3.place(x=375, y=150)
+        printjob3.place(x=375, y=110)
         printjob4 = tk.Button(self, text="Print", command=print4)
-        printjob4.place(x=375, y=200)
+        printjob4.place(x=375, y=150)
 
         registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(Register))
-        registerbutton.place(x=55, y=250)
+        registerbutton.place(x=55, y=200)
         creditreportbutton = tk.Button(self, text="Credit report", command=lambda: controller.show_frame(CreditReport))
-        creditreportbutton.place(x=165, y=250)
+        creditreportbutton.place(x=165, y=200)
         restartcupsbutton = tk.Button(self, text="Reload printer", command=restartcups)
-        restartcupsbutton.place(x=300, y=250)
+        restartcupsbutton.place(x=300, y=200)
 
         # Show label list
         showjob = tk.Label(self, font=LIST_FONT)
