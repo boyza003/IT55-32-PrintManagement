@@ -255,6 +255,12 @@ class StartPage(tk.Frame):
         def print1():
             global job1fromupdate
             global job1timeupdate
+            global job2fromupdate
+            global job2timeupdate
+            global job3fromupdate
+            global job3timeupdate
+            global job4fromupdate
+            global job4timeupdate
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -284,6 +290,8 @@ class StartPage(tk.Frame):
                 os.popen(strmove).read()
                 os.popen(strhold).read()
                 cutcredit(stdid, row[0])
+                job2fromupdate = "                            "
+                job2timeupdate = "                            "
 
         def print3():
             stdid, ststusid = readcard()
@@ -298,6 +306,8 @@ class StartPage(tk.Frame):
                 os.popen(strmove).read()
                 os.popen(strhold).read()
                 cutcredit(stdid, row[0])
+                job3fromupdate = "                            "
+                job3timeupdate = "                            "
 
         def print4():
             stdid, ststusid = readcard()
@@ -313,6 +323,8 @@ class StartPage(tk.Frame):
                 os.popen(strmove).read()
                 os.popen(strhold).read()
                 cutcredit(stdid, row[0])
+                job4fromupdate = "                            "
+                job4timeupdate = "                            "
 
         def restartcups():
             os.popen("sudo service cups restart").read()
