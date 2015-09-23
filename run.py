@@ -14,6 +14,9 @@ TIME_FONT = ("Helvetica", 14, "italic")
 # Database connection
 conn2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
 
+# Time frist job
+times = ["00:00:01", "00:00:02", "00:00:03", "00:00:04"]
+
 # List job
 job1from = ""
 job1time = ""
@@ -75,6 +78,7 @@ class StartPage(tk.Frame):
         # List lable
         def getjobfrom(label):
             def looppoolmanagement():
+                global times
                 global getText
                 global job1from
                 global job1time
@@ -189,7 +193,8 @@ class StartPage(tk.Frame):
                     print(getjobid)
                     print(gethostname)
                     # print(row[0])
-                    if row[0] == 1:
+                    if times.index(min(times)) == 0:
+                        times[0] = time.strftime("%H:%M:%S")
                         strmove = "sudo lpmove " + getjobid + " pool1"
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
@@ -203,7 +208,8 @@ class StartPage(tk.Frame):
                         job1fromupdate = gethostname
                         job1timeupdate = str(time.strftime("%H:%M:%S"))
 
-                    elif row[0] == 2:
+                    elif times.index(min(times)) == 1:
+                        times[1] = time.strftime("%H:%M:%S")
                         strmove = "sudo lpmove " + getjobid + " pool2"
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
@@ -217,7 +223,8 @@ class StartPage(tk.Frame):
                         job2fromupdate = gethostname
                         job2timeupdate = str(time.strftime("%H:%M:%S"))
 
-                    elif row[0] == 3:
+                    elif times.index(min(times)) == 2:
+                        times[2] = time.strftime("%H:%M:%S")
                         strmove = "sudo lpmove " + getjobid + " pool3"
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
@@ -231,7 +238,8 @@ class StartPage(tk.Frame):
                         job3fromupdate = gethostname
                         job3timeupdate = str(time.strftime("%H:%M:%S"))
 
-                    elif row[0] == 4:
+                    elif times.index(min(times)) == 3:
+                        times[3] = time.strftime("%H:%M:%S")
                         jobinpool1 = getjobid
                         strmove = "sudo lpmove " + getjobid + " pool4"
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
