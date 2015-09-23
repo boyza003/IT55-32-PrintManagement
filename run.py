@@ -263,15 +263,10 @@ class StartPage(tk.Frame):
         def print1():
             global job1fromupdate
             global job1timeupdate
-            global job2fromupdate
-            global job2timeupdate
-            global job3fromupdate
-            global job3timeupdate
-            global job4fromupdate
-            global job4timeupdate
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
+                times[0] = time.strftime("%H:%M:%S")
                 print("get")
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
@@ -286,9 +281,12 @@ class StartPage(tk.Frame):
                 job1timeupdate = "                            "
 
         def print2():
+            global job2fromupdate
+            global job2timeupdate
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
+                times[1] = time.strftime("%H:%M:%S")
                 print("get")
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
@@ -302,9 +300,12 @@ class StartPage(tk.Frame):
                 job2timeupdate = "                            "
 
         def print3():
+            global job3fromupdate
+            global job3timeupdate
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
+                times[2] = time.strftime("%H:%M:%S")
                 print("get")
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
@@ -318,9 +319,12 @@ class StartPage(tk.Frame):
                 job3timeupdate = "                            "
 
         def print4():
+            global job4fromupdate
+            global job4timeupdate
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
+                times[3] = time.strftime("%H:%M:%S")
                 print("get")
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
