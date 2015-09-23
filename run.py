@@ -17,6 +17,12 @@ conn2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', 
 # Time frist job
 times = ["00:00:01", "00:00:02", "00:00:03", "00:00:04"]
 
+# Pool array = ["jobfrom", "jobid", "jobfromupdate", "time", "timeupdate"]
+pool1 = ["jobfrom", "jobid", "jobfromupdate", "", ""]
+pool2 = ["jobfrom", "jobid"]
+pool3 = ["jobfrom", "jobid"]
+pool4 = ["jobfrom", "jobid"]
+
 # List job
 job1from = ""
 job1time = ""
@@ -96,6 +102,10 @@ class StartPage(tk.Frame):
                 global job4time
                 global job4fromupdate
                 global job4timeupdate
+                global pool1
+                global pool2
+                global pool3
+                global pool4
                 #global cur2local
                 #cur2local = conn2local.cursor()
 
@@ -103,16 +113,16 @@ class StartPage(tk.Frame):
                 #cur2local.execute("SELECT * FROM POOL WHERE id = 1")
                 #row = cur2local.fetchone
 
-                # List 1
+                # List 1 ["jobfrom", "jobid", "jobfromupdate", "time", "timeupdate"]
                 labeljob1from = tk.Label(self, font=LIST_FONT)
                 labeljob1from.place(x=20, y=25)
                 lablejob1time = tk.Label(self, font=LIST_FONT)
                 lablejob1time.place(x=200, y=25)
-                if job1from != job1fromupdate:
-                    labeljob1from.config(text=job1fromupdate)
-                    lablejob1time.config(text=job1timeupdate)
-                    job1from = job1fromupdate
-                    job1time = job1timeupdate
+                if pool1[3] != pool1[4]:
+                    labeljob1from.config(text=pool1[0])
+                    lablejob1time.config(text=pool1[4])
+                    pool1[0] = pool1[2]
+                    pool1[3] = pool1[4]
 
                 # List 2
                 labeljob2from = tk.Label(self, font=LIST_FONT)
@@ -199,14 +209,15 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
+                        pool1 = [gethostname, getjobid]
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 1",
                                           (int(getjobid), gethostname))
                         #labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
                         #labeljob1from.place(x=20, y=25)
                         #lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=LIST_FONT)
-                        #lablejob1time.place(x=200, y=25)
-                        job1fromupdate = gethostname
-                        job1timeupdate = str(time.strftime("%H:%M:%S"))
+                        #lablejob1time.place(x=200, y=25) ["jobfrom", "jobid", "jobfromupdate", "time", "timeupdate"]
+                        pool1[2] = gethostname
+                        pool1[4] = str(time.strftime("%H:%M:%S"))
 
                     elif times.index(min(times)) == 1:
                         times[1] = time.strftime("%H:%M:%S")
@@ -214,6 +225,7 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
+                        pool2 = [gethostname, getjobid]
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 2",
                                           (int(getjobid), gethostname))
                         #labeljob2from = tk.Label(self, text=gethostname, font=LIST_FONT)
@@ -229,6 +241,7 @@ class StartPage(tk.Frame):
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
+                        pool3 = [gethostname, getjobid]
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 3",
                                           (int(getjobid), gethostname))
                         #labeljob3from = tk.Label(self, text=gethostname, font=LIST_FONT)
@@ -240,11 +253,11 @@ class StartPage(tk.Frame):
 
                     elif times.index(min(times)) == 3:
                         times[3] = time.strftime("%H:%M:%S")
-                        jobinpool1 = getjobid
                         strmove = "sudo lpmove " + getjobid + " pool4"
                         strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
+                        pool4 = [gethostname, getjobid]
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 4",
                                           (int(getjobid), gethostname))
                         #labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
@@ -263,6 +276,7 @@ class StartPage(tk.Frame):
         def print1():
             global job1fromupdate
             global job1timeupdate
+            global pool1
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -272,17 +286,20 @@ class StartPage(tk.Frame):
                 cur2local = cur2local.cursor()
                 cur2local.execute("SELECT job_id, job_from FROM POOL WHERE id = 1")
                 row = cur2local.fetchone()
-                strmove = "sudo lpmove " + str(row[0]) + " get"
-                strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                #strmove = "sudo lpmove " + str(row[0]) + " get"
+                #strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                strmove = "sudo lpmove " + pool1[1] + " get"
+                strhold = "sudo lp -i " + pool1[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[0])
+                cutcredit(stdid, pool1[1])
                 job1fromupdate = "                            "
                 job1timeupdate = "                            "
 
         def print2():
             global job2fromupdate
             global job2timeupdate
+            global pool2
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -291,17 +308,20 @@ class StartPage(tk.Frame):
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
                 row = cur2local.fetchone()
-                strmove = "sudo lpmove " + str(row[0]) + " get"
-                strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                #strmove = "sudo lpmove " + str(row[0]) + " get"
+                #strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                strmove = "sudo lpmove " + pool2[1] + " get"
+                strhold = "sudo lp -i " + pool2[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[0])
+                cutcredit(stdid, pool2[1])
                 job2fromupdate = "                            "
                 job2timeupdate = "                            "
 
         def print3():
             global job3fromupdate
             global job3timeupdate
+            global pool3
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -310,17 +330,20 @@ class StartPage(tk.Frame):
                 cur2local = pymysql.connect(host='boylogin.me', user='boy', passwd='boylogin', db='mydb')
                 cur2local = cur2local.cursor()
                 row = cur2local.fetchone()
-                strmove = "sudo lpmove " + str(row[0]) + " get"
-                strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                #strmove = "sudo lpmove " + str(row[0]) + " get"
+                #strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                strmove = "sudo lpmove " + pool3[1] + " get"
+                strhold = "sudo lp -i " + pool3[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[0])
+                cutcredit(stdid, pool3[1])
                 job3fromupdate = "                            "
                 job3timeupdate = "                            "
 
         def print4():
             global job4fromupdate
             global job4timeupdate
+            global pool4
             stdid, ststusid = readcard()
             print(ststusid)
             if ststusid == 101:
@@ -330,11 +353,13 @@ class StartPage(tk.Frame):
                 cur2local = cur2local.cursor()
                 cur2local.execute("SELECT job_id, job_from FROM POOL WHERE id = 4")
                 row = cur2local.fetchone()
-                strmove = "sudo lpmove " + str(row[0]) + " get"
-                strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                #strmove = "sudo lpmove " + str(row[0]) + " get"
+                #strhold = "sudo lp -i " + str(row[0]) + " -H resume"
+                strmove = "sudo lpmove " + pool4[1] + " get"
+                strhold = "sudo lp -i " + pool4[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, row[0])
+                cutcredit(stdid, pool4[1])
                 job4fromupdate = "                            "
                 job4timeupdate = "                            "
 
