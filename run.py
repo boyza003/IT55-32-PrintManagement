@@ -68,7 +68,6 @@ class StartPage(tk.Frame):
                 #labeljob1from.place(x=20, y=25)
                 #lablejob1time = tk.Label(self, text=row[3], font=TIME_FONT)
                 #lablejob1time.place(x=200, y=35)
-
                 # Pool2
                 #cur2local.execute("SELECT * FROM POOL WHERE id = 2")
                 #row = cur2local.fetchone()
@@ -76,7 +75,6 @@ class StartPage(tk.Frame):
                 #labeljob2from.place(x=20, y=70)
                 #lablejob2time = tk.Label(self, text=row[3], font=TIME_FONT)
                 #lablejob2time.place(x=200, y=80)
-
                 # Pool3
                 #cur2local.execute("SELECT * FROM POOL WHERE id = 3")
                 #row = cur2local.fetchone()
@@ -84,7 +82,6 @@ class StartPage(tk.Frame):
                 #labeljob3from.place(x=20, y=115)
                 #lablejob3time = tk.Label(self, text=row[3], font=TIME_FONT)
                 #lablejob3time.place(x=200, y=127)
-
                 # Pool4
                 #cur2local.execute("SELECT * FROM POOL WHERE id = 4")
                 #row = cur2local.fetchone()
