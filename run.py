@@ -48,11 +48,13 @@ class StartPage(tk.Frame):
         detailjobfrom.place(x=50, y=2)
         detailjobfrom.pi = detailjobfrom.place_info()
         detailjobdate = tk.Label(self, text="Print time", font=TIME_FONT)
-        detailjobdate.place(x=200, y=2)
+        detailjobdate.place(x=225, y=2)
         detailjobdate.pi = detailjobdate.place_info()
         delailjobink = tk.Label(self, text="", font=TIME_FONT)
         delailjobink.place(x=390, y=2)
         delailjobink.pi = delailjobink.place_info()
+
+        # List lable
 
         # Job1
         def getjobfrom(label):
@@ -61,7 +63,7 @@ class StartPage(tk.Frame):
                 global jobinpool1
                # global cur2local
                 #cur2local = conn2local.cursor()
-                
+
                 # Pool1
                #cur2local.execute("SELECT * FROM POOL WHERE id = 1")
                 #row = cur2local.fetchone()
@@ -100,7 +102,7 @@ class StartPage(tk.Frame):
 
                 # Pool management
                 print("Pool management")
-                check = os.popen("lpstat -o").read()
+                check = os.popen("sudo  lpstat -o").read()
                 print(check)
                 print(check.find("print"))
                 print(check[check.find("print") + 6:check.find("print") + 15])
@@ -117,53 +119,53 @@ class StartPage(tk.Frame):
                     print(gethostname)
                     # print(row[0])
                     if row[0] == 1:
-                        strmove = "lpmove " + getjobid + " pool1"
-                        strhold = "lp -i " + getjobid + " -H 06:00"
+                        strmove = "sudo lpmove " + getjobid + " pool1"
+                        strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 1",
                                           (int(getjobid), gethostname))
                         labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
                         labeljob1from.place(x=20, y=25)
-                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=TIME_FONT)
-                        lablejob1time.place(x=200, y=35)
+                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=LIST_FONT)
+                        lablejob1time.place(x=200, y=25)
 
                     elif row[0] == 2:
-                        strmove = "lpmove " + getjobid + " pool2"
-                        strhold = "lp -i " + getjobid + " -H 06:00"
+                        strmove = "sudo lpmove " + getjobid + " pool2"
+                        strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 2",
                                           (int(getjobid), gethostname))
-                        labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
-                        labeljob1from.place(x=20, y=70)
-                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=TIME_FONT)
-                        lablejob1time.place(x=200, y=80)
+                        labeljob2from = tk.Label(self, text=gethostname, font=LIST_FONT)
+                        labeljob2from.place(x=20, y=70)
+                        lablejob2time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=LIST_FONT)
+                        lablejob2time.place(x=200, y=70)
 
                     elif row[0] == 3:
-                        strmove = "lpmove " + getjobid + " pool3"
-                        strhold = "lp -i " + getjobid + " -H 06:00"
+                        strmove = "sudo lpmove " + getjobid + " pool3"
+                        strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 3",
                                           (int(getjobid), gethostname))
-                        labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
-                        labeljob1from.place(x=20, y=115)
-                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=TIME_FONT)
-                        lablejob1time.place(x=200, y=127)
+                        labeljob3from = tk.Label(self, text=gethostname, font=LIST_FONT)
+                        labeljob3from.place(x=20, y=115)
+                        lablejob3time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=LIST_FONT)
+                        lablejob3time.place(x=200, y=115)
 
                     elif row[0] == 4:
                         jobinpool1 = getjobid
-                        strmove = "lpmove " + getjobid + " pool4"
-                        strhold = "lp -i " + getjobid + " -H 06:00"
+                        strmove = "sudo lpmove " + getjobid + " pool4"
+                        strhold = "sudo lp -i " + getjobid + " -H 06:00"
                         os.popen(strmove).read()
                         os.popen(strhold).read()
                         cur2local.execute("UPDATE POOL SET job_id=%s, job_from=%s, time=CURTIME() WHERE id = 4",
                                           (int(getjobid), gethostname))
                         labeljob1from = tk.Label(self, text=gethostname, font=LIST_FONT)
                         labeljob1from.place(x=20, y=160)
-                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=TIME_FONT)
-                        lablejob1time.place(x=200, y=173)
+                        lablejob1time = tk.Label(self, text=str(time.strftime("%H:%M:%S")), font=LIST_FONT)
+                        lablejob1time.place(x=200, y=160)
 
                 else:
                     print("I have no job")
@@ -234,13 +236,13 @@ class StartPage(tk.Frame):
 
         # Print button zone
         printjob1 = tk.Button(self, text="Print", command=print1)
-        printjob1.place(x=395, y=30)
+        printjob1.place(x=395, y=33)
         printjob2 = tk.Button(self, text="Print", command=print2)
         printjob2.place(x=395, y=80)
         printjob3 = tk.Button(self, text="Print", command=print3)
-        printjob3.place(x=395, y=130)
+        printjob3.place(x=395, y=127)
         printjob4 = tk.Button(self, text="Print", command=print4)
-        printjob4.place(x=395, y=180)
+        printjob4.place(x=395, y=174)
 
         registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(Register))
         registerbutton.place(x=55, y=220)
