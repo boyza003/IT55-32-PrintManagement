@@ -199,7 +199,7 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + pool1[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                cutcredit(stdid, pool1[1])
+                cutcredit(stdid,pool1[0], pool1[1])
                 times[0] = "00:00:01"
                 pool1[2] = "                            "
                 pool1[4] = "                            "

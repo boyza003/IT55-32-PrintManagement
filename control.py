@@ -15,6 +15,7 @@ ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
 count = 0
 checklast = 0
 checkloopcreditcut = 0
+cutstatus = 0
 
 '''def cutcredit(stdid, jobfrom, jobid):
     global check
@@ -43,7 +44,31 @@ checkloopcreditcut = 0
         print("def cutcredit(stdid, jobfrom, jobid):")
         #print(checkloopcreditcut)
         #print(check.find(checkoutloop))
-        time.sleep(2)'''
+        time.sleep(2)
+'''
+def cutcredit(stdid, jobfrom, jobid):
+    os.popen("sudo service cups restart").read()
+    global cutstatus
+    while True:
+        check = os.popen("sudo lpstat -o").read()
+        f = open('/var/log/cups/page_log', 'r', encoding='utf-8')
+        linelist = f.readlines()
+        strr = linelist[len(linelist) - 1]
+        f.close()
+        if check.find("get-"+str(jobid)) >= 0:
+            cutstatus += 1
+            print("cusstatus")
+        elif (check.find("get-"+str(jobid)) <= 0) and (cutstatus >= 1):
+            print("page count ", int(strr[strr.find("+0700]")+7:strr.find("+0700]")+8])*int(strr[strr.find("+0700]")+9:strr.find("+0700]")+10]))
+            page = int(int(strr[strr.find("+0700]")+7:strr.find("+0700]")+8])*int(strr[strr.find("+0700]")+9:strr.find("+0700]")+10]))
+            print("sum page", page)
+            conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
+            cur2boylogin = conn2boylogin.cursor()
+            cur2boylogin.execute("UPDATE JOB SET page = %s WHERE job_id = %s", (page, jobid))
+            cur2boylogin.execute("UPDATE CREDIT SET credit_balance = credit_balance - %s, credit_used = credit_used + %s, last_print = NOW() WHERE student_id = %s", (page, page, stdid))
+            cutstatus = 0
+            return
+        time.sleep(2)
 
 def creditreport():
     x, y  = readcard()
@@ -57,7 +82,7 @@ def creditreport():
         print(e)
         return
 
-def cutcredit(stdid, jobid):
+'''def cutcredit(stdid, jobid):
     global count
     os.popen("sudo service cups restart").read()
     while True:
@@ -80,7 +105,7 @@ def cutcredit(stdid, jobid):
             count = 0
             return
         print("def cutcredit(stdid, jobid)")
-        time.sleep(1)
+        time.sleep(1)'''
 
 def readcard():
     # Return (x, y) x=datarx and y=status(100=no credit, 101=have credit, 102=card not found)
