@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d9a4f66-74d2-495f-85a8-15404e6371c6" name="Default" comment="" />
+    <list default="true" id="0d9a4f66-74d2-495f-85a8-15404e6371c6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control.py" afterPath="$PROJECT_DIR$/control.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+    </list>
     <ignored path="IT55-32-PrintManagement.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -15,17 +19,17 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1441619603199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$control.coverage" NAME="control Coverage Results" MODIFIED="1441345515832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$cutcredit.coverage" NAME="cutcredit Coverage Results" MODIFIED="1440577873042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$run.coverage" NAME="run Coverage Results" MODIFIED="1440228090972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$rfidcontrol.coverage" NAME="rfidcontrol Coverage Results" MODIFIED="1440160449244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$teststr.coverage" NAME="teststr Coverage Results" MODIFIED="1440731917683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testcut.coverage" NAME="testcut Coverage Results" MODIFIED="1441641101365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
     <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$pro.coverage" NAME="pro Coverage Results" MODIFIED="1440229496202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testloop.coverage" NAME="testloop Coverage Results" MODIFIED="1440687262774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$control.coverage" NAME="control Coverage Results" MODIFIED="1441345515832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$date.coverage" NAME="date Coverage Results" MODIFIED="1442992931714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
     <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testpymysql.coverage" NAME="testpymysql Coverage Results" MODIFIED="1440311332955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testloop.coverage" NAME="testloop Coverage Results" MODIFIED="1440687262774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$run.coverage" NAME="run Coverage Results" MODIFIED="1440228090972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$teststr.coverage" NAME="teststr Coverage Results" MODIFIED="1440731917683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
     <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testimportfrom.coverage" NAME="testimportfrom Coverage Results" MODIFIED="1440229346445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$rfidcontrol.coverage" NAME="rfidcontrol Coverage Results" MODIFIED="1440160449244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$cutcredit.coverage" NAME="cutcredit Coverage Results" MODIFIED="1440577873042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
+    <SUITE FILE_PATH="coverage/IT55-32-PrintManagement$testcut.coverage" NAME="testcut Coverage Results" MODIFIED="1441641101365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestPackage" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -40,13 +44,13 @@
         <entry file="file://$PROJECT_DIR$/control.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#27#40#0" expanded="true" />
-                <marker date="1442973586000" expanded="true" signature="1946:2115" placeholder="SELECT STUDE..STUDENT..." />
-                <marker date="1442973586000" expanded="true" signature="2964:3090" placeholder="UPDATE CREDI..." />
-                <marker date="1442973586000" expanded="true" signature="3178:3251" placeholder="UPDATE JOB S..." />
-                <marker date="1442973586000" expanded="true" signature="4399:4444" placeholder="SELECT statu..CREDIT..." />
+                <marker date="1443073787772" expanded="true" signature="1947:2116" placeholder="SELECT STUDE..STUDENT..." />
+                <marker date="1443073787772" expanded="true" signature="2965:3091" placeholder="UPDATE CREDI..." />
+                <marker date="1443073787772" expanded="true" signature="3179:3252" placeholder="UPDATE JOB S..." />
+                <marker date="1443073787772" expanded="true" signature="4400:4445" placeholder="SELECT statu..CREDIT..." />
               </folding>
             </state>
           </provider>
@@ -55,31 +59,18 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49079755">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="103" selection-end-column="37" />
+            <state vertical-scroll-proportion="-3.2">
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
               <folding>
                 <element signature="e#27#48#0" expanded="true" />
-                <marker date="1443027749000" expanded="true" signature="7062:7131" placeholder="SELECT id, J..POOL..." />
-                <marker date="1443027749000" expanded="true" signature="7425:7487" placeholder="INSERT INTO ..." />
-                <marker date="1443027749000" expanded="true" signature="8067:8134" placeholder="UPDATE POOL ..." />
-                <marker date="1443027749000" expanded="true" signature="9199:9266" placeholder="UPDATE POOL ..." />
-                <marker date="1443027749000" expanded="true" signature="10272:10339" placeholder="UPDATE POOL ..." />
-                <marker date="1443027749000" expanded="true" signature="11346:11413" placeholder="UPDATE POOL ..." />
-                <marker date="1443027749000" expanded="true" signature="12532:12578" placeholder="SELECT job_i..POOL..." />
-                <marker date="1443027749000" expanded="true" signature="15580:15626" placeholder="SELECT job_i..POOL..." />
-                <marker date="1443027749000" expanded="true" signature="18367:18398" placeholder="SELECT * FRO..STUDENT..." />
-                <marker date="1443027749000" expanded="true" signature="18551:18643" placeholder="INSERT INTO ..." />
+                <marker date="1443073830898" expanded="true" signature="4918:4980" placeholder="INSERT INTO ..." />
+                <marker date="1443073830898" expanded="true" signature="5503:5570" placeholder="UPDATE POOL ..." />
+                <marker date="1443073830898" expanded="true" signature="6204:6271" placeholder="UPDATE POOL ..." />
+                <marker date="1443073830898" expanded="true" signature="6906:6973" placeholder="UPDATE POOL ..." />
+                <marker date="1443073830898" expanded="true" signature="7607:7674" placeholder="UPDATE POOL ..." />
+                <marker date="1443073830898" expanded="true" signature="12480:12511" placeholder="SELECT * FRO..STUDENT..." />
+                <marker date="1443073830898" expanded="true" signature="12664:12756" placeholder="INSERT INTO ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="date.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestPackage/date.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,9 +113,9 @@
         <option value="$PROJECT_DIR$/TestPackage/teststr.py" />
         <option value="$PROJECT_DIR$/GUI/run.py" />
         <option value="$PROJECT_DIR$/TestPackage/testcut.py" />
-        <option value="$PROJECT_DIR$/control.py" />
         <option value="$PROJECT_DIR$/@Pi/control.py" />
         <option value="$PROJECT_DIR$/TestPackage/date.py" />
+        <option value="$PROJECT_DIR$/control.py" />
         <option value="$PROJECT_DIR$/run.py" />
       </list>
     </option>
@@ -137,10 +128,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="121" />
-    <option name="y" value="23" />
-    <option name="width" value="1242" />
-    <option name="height" value="837" />
+    <option name="x" value="-4" />
+    <option name="y" value="2" />
+    <option name="width" value="1204" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -168,7 +159,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -204,6 +194,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -610,19 +601,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="121" y="23" width="1242" height="837" extended-state="0" />
+    <frame x="-4" y="2" width="1204" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5101143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3268229" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3264865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37239584" sideWeight="0.48988566" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17713365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18006992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24929972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -669,10 +660,10 @@
           <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
             <element signature="e#27#40#0" expanded="true" />
-            <marker date="1442973586000" expanded="true" signature="1946:2115" placeholder="SELECT STUDE..STUDENT..." />
-            <marker date="1442973586000" expanded="true" signature="2964:3090" placeholder="UPDATE CREDI..." />
-            <marker date="1442973586000" expanded="true" signature="3178:3251" placeholder="UPDATE JOB S..." />
-            <marker date="1442973586000" expanded="true" signature="4399:4444" placeholder="SELECT statu..CREDIT..." />
+            <marker date="1443073787772" expanded="true" signature="1947:2116" placeholder="SELECT STUDE..STUDENT..." />
+            <marker date="1443073787772" expanded="true" signature="2965:3091" placeholder="UPDATE CREDI..." />
+            <marker date="1443073787772" expanded="true" signature="3179:3252" placeholder="UPDATE JOB S..." />
+            <marker date="1443073787772" expanded="true" signature="4400:4445" placeholder="SELECT statu..CREDIT..." />
           </folding>
         </state>
       </provider>
@@ -683,25 +674,45 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#27#48#0" expanded="true" />
-            <marker date="1443027749000" expanded="true" signature="7062:7131" placeholder="SELECT id, J..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="7425:7487" placeholder="INSERT INTO ..." />
-            <marker date="1443027749000" expanded="true" signature="8067:8134" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="9199:9266" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="10272:10339" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="11346:11413" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="12532:12578" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="15580:15626" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="18367:18398" placeholder="SELECT * FRO..STUDENT..." />
-            <marker date="1443027749000" expanded="true" signature="18551:18643" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="4918:4980" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="5503:5570" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6204:6271" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6906:6973" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="7607:7674" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="12480:12511" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1443073830898" expanded="true" signature="12664:12756" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestPackage/date.py">
+    <entry file="file://$PROJECT_DIR$/control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <folding>
+            <element signature="e#27#40#0" expanded="true" />
+            <marker date="1443073787772" expanded="true" signature="1947:2116" placeholder="SELECT STUDE..STUDENT..." />
+            <marker date="1443073787772" expanded="true" signature="2965:3091" placeholder="UPDATE CREDI..." />
+            <marker date="1443073787772" expanded="true" signature="3179:3252" placeholder="UPDATE JOB S..." />
+            <marker date="1443073787772" expanded="true" signature="4400:4445" placeholder="SELECT statu..CREDIT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#27#48#0" expanded="true" />
+            <marker date="1443073830898" expanded="true" signature="4918:4980" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="5503:5570" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6204:6271" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6906:6973" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="7607:7674" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="12480:12511" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1443073830898" expanded="true" signature="12664:12756" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -711,10 +722,10 @@
           <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding>
             <element signature="e#27#40#0" expanded="true" />
-            <marker date="1442973586000" expanded="true" signature="1946:2115" placeholder="SELECT STUDE..STUDENT..." />
-            <marker date="1442973586000" expanded="true" signature="2964:3090" placeholder="UPDATE CREDI..." />
-            <marker date="1442973586000" expanded="true" signature="3178:3251" placeholder="UPDATE JOB S..." />
-            <marker date="1442973586000" expanded="true" signature="4399:4444" placeholder="SELECT statu..CREDIT..." />
+            <marker date="1443073787772" expanded="true" signature="1947:2116" placeholder="SELECT STUDE..STUDENT..." />
+            <marker date="1443073787772" expanded="true" signature="2965:3091" placeholder="UPDATE CREDI..." />
+            <marker date="1443073787772" expanded="true" signature="3179:3252" placeholder="UPDATE JOB S..." />
+            <marker date="1443073787772" expanded="true" signature="4400:4445" placeholder="SELECT statu..CREDIT..." />
           </folding>
         </state>
       </provider>
@@ -725,58 +736,44 @@
           <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding>
             <element signature="e#27#48#0" expanded="true" />
-            <marker date="1443027749000" expanded="true" signature="7062:7131" placeholder="SELECT id, J..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="7425:7487" placeholder="INSERT INTO ..." />
-            <marker date="1443027749000" expanded="true" signature="8067:8134" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="9199:9266" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="10272:10339" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="11346:11413" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="12532:12578" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="15580:15626" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="18367:18398" placeholder="SELECT * FRO..STUDENT..." />
-            <marker date="1443027749000" expanded="true" signature="18551:18643" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="4918:4980" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="5503:5570" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6204:6271" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6906:6973" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="7607:7674" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="12480:12511" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1443073830898" expanded="true" signature="12664:12756" placeholder="INSERT INTO ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestPackage/date.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#27#40#0" expanded="true" />
-            <marker date="1442973586000" expanded="true" signature="1946:2115" placeholder="SELECT STUDE..STUDENT..." />
-            <marker date="1442973586000" expanded="true" signature="2964:3090" placeholder="UPDATE CREDI..." />
-            <marker date="1442973586000" expanded="true" signature="3178:3251" placeholder="UPDATE JOB S..." />
-            <marker date="1442973586000" expanded="true" signature="4399:4444" placeholder="SELECT statu..CREDIT..." />
+            <marker date="1443073787772" expanded="true" signature="1947:2116" placeholder="SELECT STUDE..STUDENT..." />
+            <marker date="1443073787772" expanded="true" signature="2965:3091" placeholder="UPDATE CREDI..." />
+            <marker date="1443073787772" expanded="true" signature="3179:3252" placeholder="UPDATE JOB S..." />
+            <marker date="1443073787772" expanded="true" signature="4400:4445" placeholder="SELECT statu..CREDIT..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49079755">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="103" selection-end-column="37" />
+        <state vertical-scroll-proportion="-3.2">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
           <folding>
             <element signature="e#27#48#0" expanded="true" />
-            <marker date="1443027749000" expanded="true" signature="7062:7131" placeholder="SELECT id, J..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="7425:7487" placeholder="INSERT INTO ..." />
-            <marker date="1443027749000" expanded="true" signature="8067:8134" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="9199:9266" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="10272:10339" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="11346:11413" placeholder="UPDATE POOL ..." />
-            <marker date="1443027749000" expanded="true" signature="12532:12578" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="15580:15626" placeholder="SELECT job_i..POOL..." />
-            <marker date="1443027749000" expanded="true" signature="18367:18398" placeholder="SELECT * FRO..STUDENT..." />
-            <marker date="1443027749000" expanded="true" signature="18551:18643" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="4918:4980" placeholder="INSERT INTO ..." />
+            <marker date="1443073830898" expanded="true" signature="5503:5570" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6204:6271" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="6906:6973" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="7607:7674" placeholder="UPDATE POOL ..." />
+            <marker date="1443073830898" expanded="true" signature="12480:12511" placeholder="SELECT * FRO..STUDENT..." />
+            <marker date="1443073830898" expanded="true" signature="12664:12756" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

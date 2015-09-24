@@ -15,6 +15,7 @@ ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
 count = 0
 checklast = 0
 checkloopcreditcut = 0
+
 '''def cutcredit(stdid, jobfrom, jobid):
     global check
     global checklast
