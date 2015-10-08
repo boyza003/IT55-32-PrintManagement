@@ -3,7 +3,7 @@ __author__ = 'PC-B1301'
 strr = "get BoyChaiwat 110 [24/Sep/2015:13:22:54 +0700] 2 1 - 192.168.1.38 IT55-32 - Google Docs A4 one-sid"
 jid = 111
 check = "get-" + str(jid)+ " xxxxxxxxxxxxxx"
-print(strr)
+print("Boy", strr)
 stdid = 55130500013
 
 def cutcredit(stdid, jobfrom, jobid):

@@ -46,16 +46,21 @@ cutstatus = 0
         #print(check.find(checkoutloop))
         time.sleep(2)
 '''
+
 def cutcredit(stdid, jobfrom, jobid):
     os.popen("sudo service cups restart").read()
     global cutstatus
+    print(stdid)
+    print(jobfrom)
+    print(jobid)
     while True:
         check = os.popen("sudo lpstat -o").read()
         f = open('/var/log/cups/page_log', 'r', encoding='utf-8')
         linelist = f.readlines()
         strr = linelist[len(linelist) - 1]
         f.close()
-        if check.find("get-"+str(jobid)) >= 0:
+        print(check)
+        if check.find("get-", jobid) >= 0:
             cutstatus += 1
             print("cusstatus")
         elif (check.find("get-"+str(jobid)) <= 0) and (cutstatus >= 1):
