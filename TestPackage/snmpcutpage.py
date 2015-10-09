@@ -15,17 +15,19 @@ status = 0
 
 def snmpprinter():
     global status
-    printerstatusbefore = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.1.1.3").read()
+    #printerstatusbefore = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.1.1.3").read()
     currentpagecountbefore = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.4.2.1.4.1.2.5").read()
     while True:
         print("waiting")
-        if printerstatusbefore == "Printing":
+        printerstatusbefore = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.1.1.3").read()
+        print(printerstatusbefore)
+        if printerstatusbefore.find("Printing") >= 0:
             status = 1
             while True:
                 print("waiting print complete")
                 printerstatusafter = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.1.1.3").read()
                 currentpagecountafter = os.popen("snmpgetnext -Oqv -v 2c -c public 10.4.7.201 1.3.6.1.4.1.11.2.3.9.4.2.1.4.1.2.5").read()
-                if printerstatusafter != "Printing":
+                if printerstatusafter.find("Printing") < 0:
                     print(int(currentpagecountafter)-int(currentpagecountbefore))
                     return
                 time.sleep(1)

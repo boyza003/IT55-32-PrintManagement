@@ -12,4 +12,7 @@ def cutcredit(stdid, jobfrom, jobid):
     print(strr[strr.find("+0700]")+9:strr.find("+0700]")+10])
     print(int(strr[strr.find("+0700]")+7:strr.find("+0700]")+8])*int(strr[strr.find("+0700]")+9:strr.find("+0700]")+10]))
     print(check.find("get-110"))
-cutcredit(55130500013, "BoyChaiwat", 110)
+#cutcredit(55130500013, "BoyChaiwat", 110)
+
+p = "Printin"
+print(p.find("Printing"))
