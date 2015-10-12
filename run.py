@@ -57,7 +57,7 @@ class StartPage(tk.Frame):
         detailjobfrom.place(x=50, y=2)
         detailjobfrom.pi = detailjobfrom.place_info()
         detailjobdate = tk.Label(self, text="Print time", font=TIME_FONT)
-        detailjobdate.place(x=265, y=2)
+        detailjobdate.place(x=225, y=2)
         detailjobdate.pi = detailjobdate.place_info()
         delailjobink = tk.Label(self, text="", font=TIME_FONT)
         delailjobink.place(x=390, y=2)
@@ -77,7 +77,7 @@ class StartPage(tk.Frame):
                 labeljob1from = tk.Label(self, font=LIST_FONT)
                 labeljob1from.place(x=20, y=25)
                 lablejob1time = tk.Label(self, font=LIST_FONT)
-                lablejob1time.place(x=250, y=25)
+                lablejob1time.place(x=200, y=25)
                 if pool1[3] != pool1[4]:
                     labeljob1from.config(text=pool1[2])
                     lablejob1time.config(text=pool1[4])
@@ -88,7 +88,7 @@ class StartPage(tk.Frame):
                 labeljob2from = tk.Label(self, font=LIST_FONT)
                 labeljob2from.place(x=20, y=70)
                 lablejob2time = tk.Label(self, font=LIST_FONT)
-                lablejob2time.place(x=250, y=70)
+                lablejob2time.place(x=200, y=70)
                 if pool2[3] != pool2[4]:
                     labeljob2from.config(text=pool2[2])
                     lablejob2time.config(text=pool2[4])
@@ -99,7 +99,7 @@ class StartPage(tk.Frame):
                 labeljob3from = tk.Label(self, font=LIST_FONT)
                 labeljob3from.place(x=20, y=115)
                 lablejob3time = tk.Label(self, font=LIST_FONT)
-                lablejob3time.place(x=250, y=115)
+                lablejob3time.place(x=200, y=115)
                 if pool3[3] != pool3[4]:
                     labeljob3from.config(text=pool3[2])
                     lablejob3time.config(text=pool3[4])
@@ -110,7 +110,7 @@ class StartPage(tk.Frame):
                 labeljob4from = tk.Label(self, font=LIST_FONT)
                 labeljob4from.place(x=20, y=160)
                 lablejob4time = tk.Label(self, font=LIST_FONT)
-                lablejob4time.place(x=250, y=160)
+                lablejob4time.place(x=200, y=160)
                 if pool4[3] != pool4[4]:
                     labeljob4from.config(text=pool4[2])
                     lablejob4time.config(text=pool4[4])
@@ -199,13 +199,10 @@ class StartPage(tk.Frame):
                 strhold = "sudo lp -i " + pool1[1] + " -H resume"
                 os.popen(strmove).read()
                 os.popen(strhold).read()
-                print(stdid)
-                print(pool1[0])
-                print(pool1[1])
-                cutcredit(stdid, pool1[0], pool1[1])
+                cutcredit(stdid,pool1[0], pool1[1])
                 times[0] = "00:00:01"
                 pool1[2] = "                            "
-                pool1[4] = "                            "
+                pool1[4] = "                      "
 
         def print2():
             global pool2
@@ -219,7 +216,7 @@ class StartPage(tk.Frame):
                 cutcredit(stdid, pool2[1])
                 times[1] = "00:00:02"
                 pool2[2] = "                            "
-                pool2[4] = "                            "
+                pool2[4] = "                      "
 
         def print3():
             global pool3
@@ -233,7 +230,7 @@ class StartPage(tk.Frame):
                 cutcredit(stdid, pool3[1])
                 times[2] = "00:00:03"
                 pool3[2] = "                            "
-                pool3[4] = "                            "
+                pool3[4] = "                      "
 
         def print4():
             global pool4
@@ -247,20 +244,20 @@ class StartPage(tk.Frame):
                 cutcredit(stdid, pool4[1])
                 times[3] = "00:00:04"
                 pool4[2] = "                            "
-                pool4[4] = "                            "
+                pool4[4] = "                      "
 
         def restartcups():
             os.popen("sudo service cups restart").read()
 
         # Print button zone
         printjob1 = tk.Button(self, text="Print", command=print1)
-        printjob1.place(x=395, y=30)
+        printjob1.place(x=395, y=33)
         printjob2 = tk.Button(self, text="Print", command=print2)
-        printjob2.place(x=395, y=75)
+        printjob2.place(x=395, y=80)
         printjob3 = tk.Button(self, text="Print", command=print3)
-        printjob3.place(x=395, y=120)
+        printjob3.place(x=395, y=127)
         printjob4 = tk.Button(self, text="Print", command=print4)
-        printjob4.place(x=395, y=165)
+        printjob4.place(x=395, y=174)
 
         registerbutton = tk.Button(self, text="Register", command=lambda: controller.show_frame(Register))
         registerbutton.place(x=55, y=220)
@@ -296,7 +293,6 @@ class Register(tk.Frame):
         def clickregister():
             global con2boylogin
             try:
-                conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
                 cur2boylogin = conn2boylogin.cursor()
                 x, y = readcard()
                 cur2boylogin.execute("SELECT * FROM STUDENT WHERE id=%s", x)

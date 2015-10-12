@@ -12,10 +12,13 @@ selectkey = bytes([0xBA, 0x02, 0x01, 0xB9])
 ledon = bytes([0xBA, 0x03, 0x40, 0x01, 0xF8])
 ledoff = bytes([0xBA, 0x03, 0x40, 0x00, 0xF9])
 
+conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
 count = 0
 checklast = 0
 checkloopcreditcut = 0
 cutstatus = 0
+status = 0
+
 
 '''def cutcredit(stdid, jobfrom, jobid):
     global check
@@ -46,21 +49,16 @@ cutstatus = 0
         #print(check.find(checkoutloop))
         time.sleep(2)
 '''
-
-def cutcredit(stdid, jobfrom, jobid):
+'''def cutcredit(stdid, jobfrom, jobid):
     os.popen("sudo service cups restart").read()
     global cutstatus
-    print(stdid)
-    print(jobfrom)
-    print(jobid)
     while True:
         check = os.popen("sudo lpstat -o").read()
         f = open('/var/log/cups/page_log', 'r', encoding='utf-8')
         linelist = f.readlines()
         strr = linelist[len(linelist) - 1]
         f.close()
-        print(check)
-        if check.find("get-", jobid) >= 0:
+        if check.find("get-"+str(jobid)) >= 0:
             cutstatus += 1
             print("cusstatus")
         elif (check.find("get-"+str(jobid)) <= 0) and (cutstatus >= 1):
@@ -74,11 +72,45 @@ def cutcredit(stdid, jobfrom, jobid):
             cutstatus = 0
             return
         time.sleep(2)
+'''
+
+
+def cutcredit(stdid, jobfrom, jobid):
+    global conn2boylogin
+    os.popen("sudo service cups restart").read()
+    global status
+    strgetpage = "snmpgetnext -Oqv -v 2c -c public 10.4.7.202 1.3.6.1.4.1.11.2.3.9.4.2.1.4.1.2.5"
+    strgetstatus = "snmpgetnext -Oqv -v 2c -c public 10.4.7.202 1.3.6.1.4.1.11.2.3.9.1.1.3"
+    currentpagecountbefore = os.popen(strgetpage).read()
+    while True:
+        print("waiting")
+        printerstatusbefore = os.popen(strgetstatus).read()
+        print(printerstatusbefore)
+        if printerstatusbefore.find("Printing") >= 0:
+            status = 1
+            while True:
+                print("waiting print complete")
+                printerstatusafter = os.popen(strgetstatus).read()
+                currentpagecountafter = os.popen(strgetpage).read()
+                if printerstatusafter.find("Printing") < 0:
+                    print(int(currentpagecountafter)-int(currentpagecountbefore))
+                    page = int(currentpagecountafter)-int(currentpagecountbefore)
+                    conn2boylogin = conn2boylogin.cursor()
+                    conn2boylogin.execute("UPDATE JOB SET page = %s,job_out = NOW(), STUDENT_id = %s WHERE job_id = %s", (int(page), stdid, jobid))
+                    conn2boylogin.execute("UPDATE CREDIT SET credit_balance = credit_balance - %s, credit_used = credit_used + %s, last_print = NOW() WHERE student_id = %s", (page, page, stdid))
+                    status = 0
+                    return
+                time.sleep(1)
+        elif status == 1:
+            status = 0
+            return
+        time.sleep(1)
+
 
 def creditreport():
-    x, y  = readcard()
+    global conn2boylogin
+    x, y = readcard()
     try:
-        conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
         cur2boylogin = conn2boylogin.cursor()
         cur2boylogin.execute("SELECT STUDENT.firstname, STUDENT.lastname, STUDENT.stdid, CREDIT.credit_balance FROM  STUDENT LEFT JOIN  CREDIT ON STUDENT.id = CREDIT.student_id WHERE STUDENT.id LIKE %s", x)
         row = cur2boylogin.fetchone()
@@ -86,6 +118,7 @@ def creditreport():
     except Exception as e:
         print(e)
         return
+
 
 '''def cutcredit(stdid, jobid):
     global count
@@ -112,9 +145,11 @@ def creditreport():
         print("def cutcredit(stdid, jobid)")
         time.sleep(1)'''
 
+
 def readcard():
     # Return (x, y) x=datarx and y=status(100=no credit, 101=have credit, 102=card not found)
     global count
+    global conn2boylogin
     while True:
         # count == 100 because (0.1*3)*50 = 15sec, by 0.1=timeout and 3 data to write(ledon, ledoff, selectcard)
         # Must read rx data before write next tx data
@@ -130,10 +165,9 @@ def readcard():
             elif datarx != "bd030101be":
                 check.write(bytearray(ledoff))
                 check.read(128)
-                conn2boylogin = pymysql.connect(host='boylogin.me', port=3306, user='boy', passwd='boylogin', db='mydb')
-                cur2boylogin = conn2boylogin.cursor()
-                cur2boylogin.execute("SELECT status FROM CREDIT WHERE student_id = %s", datarx)
-                row = cur2boylogin.fetchone()
+                conn2boylogin = conn2boylogin.cursor()
+                conn2boylogin.execute("SELECT status FROM CREDIT WHERE student_id = %s", datarx)
+                row = conn2boylogin.fetchone()
                 #print(datarx)
                 count = 0
                 return datarx, row[0]
